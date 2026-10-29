@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" role="img" aria-label="Redbridge Directory Logo">
+  <!-- Redbridge Directory Official Logo Wordmark -->
+  <g id="logo-mark">
+    <!-- Icon Symbol: Stylized Connected Compass/Pin in Brand Colours -->
+    <rect x="4" y="8" width="48" height="48" rx="12" fill="#032C4D" />
+    <path d="M 28 16 L 36 28 L 28 40 L 20 28 Z" fill="#FF8717" />
+    <circle cx="28" cy="28" r="4.5" fill="#FFFFFF" />
+    <circle cx="28" cy="18" r="2" fill="#FFFFFF" />
+    <circle cx="38" cy="28" r="2" fill="#FF8717" />
+    <circle cx="28" cy="38" r="2" fill="#FF8717" />
+    <circle cx="18" cy="28" r="2" fill="#FF8717" />
+    <!-- Connector lines -->
+    <line x1="28" y1="18" x2="28" y2="23.5" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="1 1" />
+  </g>
+  <g id="logo-text" transform="translate(64, 12)">
+    <text x="0" y="22" font-family="'Poppins', sans-serif" font-size="20" font-weight="800" fill="#032C4D" letter-spacing="-0.02em">
+      REDBRIDGE<tspan fill="#FF8717">.</tspan>
+    </text>
+    <text x="136" y="22" font-family="'Poppins', sans-serif" font-size="20" font-weight="500" fill="#032C4D" letter-spacing="-0.01em">
+      DIRECTORY
+    </text>
+    <text x="0" y="38" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#5A6E82" letter-spacing="0.08em" text-transform="uppercase">
+      Backed by Redbridge Chamber of Commerce
+    </text>
+  </g>
+</svg>

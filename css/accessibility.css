@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Redbridge Directory — Accessibility, Focus, & Motion Styles (WCAG 2.2 AA)
+   ========================================================================== */
+
+/* Skip to Main Content Link */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 1rem;
+  z-index: 9999;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-orange);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid var(--color-orange);
+  outline-offset: 2px;
+}
+
+/* Screen Reader Only Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* High Contrast Keyboard Focus Rings */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Inverse focus ring for dark backgrounds (footer, powerlist) */
+.section-powerlist a:focus-visible,
+.section-powerlist button:focus-visible,
+.site-footer a:focus-visible,
+.site-footer button:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .countdown-pulsing-dot {
+    animation: none !important;
+  }
+
+  .btn:hover,
+  .benefit-card:hover {
+    transform: none !important;
+  }
+}
+
+/* Print Optimization */
+@media print {
+  .site-header,
+  .mobile-sticky-cta,
+  .countdown-box {
+    display: none !important;
+  }
+
+  body {
+    color: #000000 !important;
+    background: #FFFFFF !important;
+    font-size: 12pt;
+  }
+
+  .btn {
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}

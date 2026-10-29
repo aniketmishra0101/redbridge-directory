@@ -1,0 +1,21 @@
+{
+  "name": "redbridge-directory-landing-page",
+  "version": "1.0.0",
+  "description": "High-conversion, accessible landing page for the Redbridge Directory, backed by the Redbridge Chamber of Commerce.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/site.test.js"
+  },
+  "keywords": [
+    "redbridge",
+    "directory",
+    "chamber-of-commerce",
+    "landing-page",
+    "business-directory",
+    "local-business"
+  ],
+  "author": "Redbridge Chamber of Commerce",
+  "license": "UNLICENSED",
+  "private": true
+}

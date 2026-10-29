@@ -1,0 +1,292 @@
+/* ==========================================================================
+   Redbridge Directory — Design Tokens & Core Styles
+   Brand Palette:
+   - Primary Navy:   #032C4D
+   - Primary Orange: #FF8717
+   - Base White:     #FFFFFF
+   Typography:
+   - Body & Controls: Inter (Google Font)
+   - Headings & CTAs: Poppins (Google Font)
+   ========================================================================== */
+
+:root {
+  /* Brand Colours */
+  --color-navy: #032C4D;
+  --color-navy-dark: #021F37;
+  --color-navy-light: #0A3D66;
+  --color-navy-tint: #F0F4F8;
+  --color-navy-border: #D1DDE8;
+
+  --color-orange: #FF8717;
+  --color-orange-hover: #E67205;
+  --color-orange-active: #C95E00;
+  --color-orange-light: #FFF7ED;
+  --color-orange-tint: #FFF4E8;
+  --color-orange-border: rgba(255, 135, 23, 0.35);
+
+  --color-white: #FFFFFF;
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+
+  /* Semantic Roles */
+  --bg-page: #FFFFFF;
+  --bg-surface: #FFFFFF;
+  --bg-subtle-blue: #F4F7FA;
+  --bg-subtle-orange: #FFF8F2;
+  --bg-footer: #032C4D;
+
+  --text-main: #1E293B;
+  --text-muted: #475569;
+  --text-light: #64748B;
+  --text-navy: #032C4D;
+  --text-white: #FFFFFF;
+
+  /* Typography */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Spacing */
+  --container-max: 1200px;
+  --container-narrow: 840px;
+  --container-pad: 1.5rem;
+  --section-pad-y: 5.5rem;
+  --section-pad-y-sm: 3.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(3, 44, 77, 0.05);
+  --shadow-md: 0 4px 14px rgba(3, 44, 77, 0.08);
+  --shadow-lg: 0 10px 28px rgba(3, 44, 77, 0.10);
+  --shadow-cta: 0 6px 20px rgba(255, 135, 23, 0.32);
+
+  /* Borders & Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --border-subtle: 1px solid var(--color-slate-200);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modern Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--bg-page);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Global Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  color: var(--text-navy);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 4.5vw, 3.25rem);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.45rem);
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.0625rem;
+  line-height: 1.68;
+}
+
+p.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-slate-700);
+}
+
+/* Section Header Utility */
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+  margin-bottom: 0.85rem;
+}
+
+.section-header p {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Eyebrows */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow-navy {
+  color: var(--color-navy);
+}
+
+.eyebrow-badge {
+  background-color: var(--color-orange-light);
+  color: var(--color-navy);
+  border: 1px solid var(--color-orange-border);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Buttons and Links */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-normal);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.btn-primary {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  box-shadow: var(--shadow-cta);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 135, 23, 0.45);
+}
+
+.btn-primary:active {
+  background-color: var(--color-orange-active);
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-lg {
+  padding: 1.125rem 2.25rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+}
+
+.btn-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  stroke-width: 2.5;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  :root {
+    --section-pad-y: 3.75rem;
+    --section-pad-y-sm: 2.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+}
