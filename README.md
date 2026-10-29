@@ -50,3 +50,4 @@ npm test
 
 6. **Privacy Policy Link**:
    - Updated across the entire site to: [`https://www.redbridgechamber.com/privacy-policy/`](https://www.redbridgechamber.com/privacy-policy/).
+
