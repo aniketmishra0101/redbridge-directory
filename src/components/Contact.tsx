@@ -42,11 +42,9 @@ export const Contact: React.FC = () => {
               </span>
             </a>
 
-            {/* Channel 2: Email */}
-            <a 
-              href={contact.emailHref} 
-              className="contact-channel-card" 
-              data-track-event="contact_email_click" 
+            {/* Channel 2: Email (Plain text, no mailto link) */}
+            <div 
+              className="contact-channel-card contact-channel-static" 
               aria-label={`Email Redbridge Chamber of Commerce at ${contact.email}`}
             >
               <div className="contact-icon-box" aria-hidden="true">
@@ -56,14 +54,8 @@ export const Contact: React.FC = () => {
                 </svg>
               </div>
               <span className="contact-channel-label">Email Us</span>
-              <span className="contact-channel-value">{contact.email}</span>
-              <span className="contact-channel-action">
-                <span>Send email</span>
-                <svg width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </span>
-            </a>
+              <span className="contact-channel-value" style={{ userSelect: 'all' }}>{contact.email}</span>
+            </div>
 
             {/* Channel 3: Contact Page */}
             <a 
@@ -98,7 +90,7 @@ export const Contact: React.FC = () => {
           <div className="contact-direct-summary">
             Do you have a question about membership, an event, or the Chamber itself? Then please get in touch. Call us on{' '}
             <a href={contact.phoneHref}>{contact.phone}</a>, email{' '}
-            <a href={contact.emailHref}>{contact.email}</a>, or visit our{' '}
+            <span style={{ fontWeight: 600 }}>{contact.email}</span>, or visit our{' '}
             <a href={contact.pageUrl} target="_blank" rel="noopener noreferrer">contact page</a>.
           </div>
 

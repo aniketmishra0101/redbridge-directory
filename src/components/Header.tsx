@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
             <ul className="nav-list">
               <li><a href="#benefits" className="nav-link">Benefits</a></li>
               <li><a href="#membership" className="nav-link">Membership</a></li>
-              <li><a href="#powerlist" className="nav-link">Redbridge Powerlist</a></li>
+              <li><a href="#contact" className="nav-link">Contact</a></li>
             </ul>
           </nav>
 
@@ -72,7 +72,7 @@ export const Header: React.FC = () => {
         <ul className="mobile-nav-list">
           <li><a href="#benefits" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Benefits</a></li>
           <li><a href="#membership" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Membership</a></li>
-          <li><a href="#powerlist" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Redbridge Powerlist</a></li>
+          <li><a href="#contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
         </ul>
         <a 
           href="#register" 

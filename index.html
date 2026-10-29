@@ -63,7 +63,6 @@
           <ul class="nav-list">
             <li><a href="#benefits" class="nav-link">Benefits</a></li>
             <li><a href="#membership" class="nav-link">Membership</a></li>
-            <li><a href="#powerlist" class="nav-link">Redbridge Powerlist</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
@@ -92,7 +91,6 @@
       <ul class="mobile-nav-list">
         <li><a href="#benefits" class="mobile-nav-link">Benefits</a></li>
         <li><a href="#membership" class="mobile-nav-link">Membership</a></li>
-        <li><a href="#powerlist" class="mobile-nav-link">Redbridge Powerlist</a></li>
         <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
       </ul>
       <a href="#register" class="btn btn-primary" data-track-event="header_cta_click" style="width: 100%;">
@@ -419,64 +417,7 @@
 
 
     <!-- ======================================================================
-         6. Redbridge Powerlist Section (Separate Initiative — Clean Text Badge)
-         ====================================================================== -->
-    <section class="section-powerlist" id="powerlist" aria-labelledby="powerlist-heading">
-      <div class="container container-narrow">
-        
-        <div class="powerlist-card">
-          <div class="powerlist-inner">
-            
-            <div class="powerlist-badge">
-              <span>REDBRIDGE POWERLIST • SEPARATE INITIATIVE</span>
-            </div>
-
-            <h2 id="powerlist-heading" class="powerlist-title">
-              Know Someone Making a Difference in Redbridge?
-            </h2>
-
-            <div class="powerlist-copy">
-              <p>
-                The <span class="powerlist-highlight">Redbridge Powerlist</span> is an annual, unranked selection of 25 influential people who live or work in Redbridge.
-              </p>
-              <p>
-                It celebrates influence demonstrated through business achievement, community impact, leadership and public service.
-              </p>
-              <p class="powerlist-highlight">
-                Self-nominations are welcome.
-              </p>
-            </div>
-
-            <!-- Secondary Powerlist CTA -->
-            <div class="powerlist-cta-box">
-              <a href="https://members.redbridgechamberofcommerce.co.uk/powerlist-nomination" 
-                 class="btn btn-powerlist" 
-                 data-bind="powerlist-url" 
-                 data-track-event="powerlist_nomination_cta_click" 
-                 target="_blank" 
-                 rel="noopener noreferrer">
-                <span>NOMINATE SOMEONE FOR THE REDBRIDGE POWERLIST</span>
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-
-              <p class="powerlist-disclaimer">
-                Opens the official Redbridge Powerlist nomination form in a new window.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================================
-         7. Contact Section: Talk to Us
+         6. Contact Section: Talk to Us
          ====================================================================== -->
     <section class="section-contact" id="contact" aria-labelledby="contact-heading">
       <div class="container">
@@ -507,8 +448,8 @@
               </span>
             </a>
 
-            <!-- Channel 2: Email -->
-            <a href="mailto:chamber@redbridgechamber.com" class="contact-channel-card" data-track-event="contact_email_click" aria-label="Email Redbridge Chamber of Commerce at chamber@redbridgechamber.com">
+            <!-- Channel 2: Email (Plain text, no mailto link) -->
+            <div class="contact-channel-card contact-channel-static" aria-label="Email Redbridge Chamber of Commerce at chamber@redbridgechamber.com">
               <div class="contact-icon-box" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -516,12 +457,8 @@
                 </svg>
               </div>
               <span class="contact-channel-label">Email Us</span>
-              <span class="contact-channel-value">chamber@redbridgechamber.com</span>
-              <span class="contact-channel-action">
-                <span>Send email</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </a>
+              <span class="contact-channel-value" style="user-select: all;">chamber@redbridgechamber.com</span>
+            </div>
 
             <!-- Channel 3: Contact Page -->
             <a href="https://www.redbridgechamber.com/contact/" target="_blank" rel="noopener noreferrer" class="contact-channel-card" data-track-event="contact_page_click" aria-label="Visit official RCC contact page">
@@ -542,9 +479,9 @@
 
           </div>
 
-          <!-- Exact Requested Summary Paragraph -->
+          <!-- Summary Paragraph (No mailto link) -->
           <div class="contact-direct-summary">
-            Do you have a question about membership, an event, or the Chamber itself? Then please get in touch. Call us on <a href="tel:02036339665">020 3633 9665</a>, email <a href="mailto:chamber@redbridgechamber.com">chamber@redbridgechamber.com</a>, or visit our <a href="https://www.redbridgechamber.com/contact/" target="_blank" rel="noopener noreferrer">contact page</a>.
+            Do you have a question about membership, an event, or the Chamber itself? Then please get in touch. Call us on <a href="tel:02036339665">020 3633 9665</a>, email <span style="font-weight: 600;">chamber@redbridgechamber.com</span>, or visit our <a href="https://www.redbridgechamber.com/contact/" target="_blank" rel="noopener noreferrer">contact page</a>.
           </div>
 
         </div>
@@ -580,7 +517,6 @@
             <li><a href="#benefits" class="footer-link">Benefits of Joining</a></li>
             <li><a href="#membership" class="footer-link">Membership Tiers</a></li>
             <li><a href="#register" class="footer-link">Register Business Listing</a></li>
-            <li><a href="#powerlist" class="footer-link">Redbridge Powerlist</a></li>
             <li><a href="#contact" class="footer-link">Talk to Us</a></li>
           </ul>
         </div>

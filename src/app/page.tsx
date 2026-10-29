@@ -4,7 +4,6 @@ import { Hero } from '../components/Hero';
 import { Benefits } from '../components/Benefits';
 import { Membership } from '../components/Membership';
 import { RegistrationCta } from '../components/RegistrationCta';
-import { Powerlist } from '../components/Powerlist';
 import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
 
@@ -18,7 +17,6 @@ export default function RedbridgeDirectoryPage() {
         <Benefits />
         <Membership />
         <RegistrationCta />
-        <Powerlist />
         <Contact />
       </main>
       <Footer />

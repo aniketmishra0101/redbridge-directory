@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
               <li><a href="#benefits" className="footer-link">Benefits of Joining</a></li>
               <li><a href="#membership" className="footer-link">Membership Tiers</a></li>
               <li><a href="#register" className="footer-link">Register Business Listing</a></li>
-              <li><a href="#powerlist" className="footer-link">Redbridge Powerlist</a></li>
+              <li><a href="#contact" className="footer-link">Talk to Us</a></li>
             </ul>
           </div>
 

@@ -81,31 +81,30 @@ runTest('User Feedback: Target date above countdown label removed', () => {
   assert(!htmlContent.includes('Target: 1st January 2027 (GMT)'), 'Target date above countdown was not removed');
 });
 
-// 4. User Feedback: Star icon removed from Powerlist
-runTest('User Feedback: Star icon removed from Powerlist section', () => {
-  const powerlistSection = htmlContent.substring(htmlContent.indexOf('id="powerlist"'), htmlContent.indexOf('id="contact"'));
-  assert(!powerlistSection.includes('<polygon'), 'Star icon polygon still present in Powerlist section');
+// 4. User Feedback: Powerlist section removed
+runTest('User Feedback: Powerlist section removed as requested', () => {
+  assert(!htmlContent.includes('id="powerlist"'), 'Powerlist section should be removed');
+  assert(!htmlContent.includes('REDBRIDGE POWERLIST • SEPARATE INITIATIVE'), 'Powerlist badge should be removed');
 });
 
-// 5. User Feedback: Contact Section "Talk to us"
-runTest('User Feedback: Contact section "Talk to us" present with exact details', () => {
+// 5. User Feedback: Contact Section "Talk to us" (Zero mailto: links)
+runTest('User Feedback: Contact section "Talk to us" present with exact details (No mailto: links)', () => {
   assert(htmlContent.includes('Talk to us'), 'Contact section heading "Talk to us" missing');
   assert(htmlContent.includes('Do you have a question about membership, an event, or the Chamber itself? Then please get in touch.'), 'Contact lead copy missing');
   assert(htmlContent.includes('020 3633 9665'), 'Phone number 020 3633 9665 missing');
   assert(htmlContent.includes('tel:02036339665'), 'Phone tel: link missing');
   assert(htmlContent.includes('chamber@redbridgechamber.com'), 'Email chamber@redbridgechamber.com missing');
-  assert(htmlContent.includes('mailto:chamber@redbridgechamber.com'), 'Email mailto: link missing');
+  assert(!htmlContent.includes('mailto:'), 'Contact section must NOT contain mailto: links');
   assert(htmlContent.includes('https://www.redbridgechamber.com/contact/'), 'Contact page link missing');
 });
 
 // 6. Strict Section Sequence
-runTest('Website Structure: Exact Section Sequence 1 to 8', () => {
+runTest('Website Structure: Exact Section Sequence 1 to 7', () => {
   const headerIdx = htmlContent.indexOf('<header');
   const heroIdx = htmlContent.indexOf('class="section-hero"');
   const benefitsIdx = htmlContent.indexOf('class="section-benefits"');
   const membershipIdx = htmlContent.indexOf('class="section-membership"');
   const registerIdx = htmlContent.indexOf('class="section-register"');
-  const powerlistIdx = htmlContent.indexOf('class="section-powerlist"');
   const contactIdx = htmlContent.indexOf('class="section-contact"');
   const footerIdx = htmlContent.indexOf('<footer');
 
@@ -114,8 +113,7 @@ runTest('Website Structure: Exact Section Sequence 1 to 8', () => {
   assert(benefitsIdx > heroIdx, 'Benefits must be after Hero');
   assert(membershipIdx > benefitsIdx, 'Membership must be after Benefits');
   assert(registerIdx > membershipIdx, 'Registration must be after Membership');
-  assert(powerlistIdx > registerIdx, 'Powerlist must be after Registration');
-  assert(contactIdx > powerlistIdx, 'Contact must be after Powerlist');
+  assert(contactIdx > registerIdx, 'Contact must be after Registration');
   assert(footerIdx > contactIdx, 'Footer must be after Contact');
 });
 
@@ -159,12 +157,8 @@ runTest('Registration Section Copy & External Redirect: Strictly NO forms', () =
   assert(config.registration.target === '_self', 'Registration link must open in same tab');
 });
 
-runTest('Powerlist Section: Distinct initiative & separate nomination button', () => {
-  assert(htmlContent.includes('Know Someone Making a Difference in Redbridge?'), 'Powerlist heading missing');
-  assert(htmlContent.includes('annual, unranked selection of 25 influential people who live or work in Redbridge'), 'Powerlist description missing');
-  assert(htmlContent.includes('Self-nominations are welcome.'), 'Self-nominations notice missing');
-  assert(htmlContent.includes('NOMINATE SOMEONE FOR THE REDBRIDGE POWERLIST'), 'Powerlist CTA text missing');
-  assert(config.powerlist.nominationUrl !== config.registration.url, 'Powerlist URL must NOT link to business registration form');
+runTest('Powerlist Section: Removed from landing page', () => {
+  assert(!htmlContent.includes('class="section-powerlist"'), 'Powerlist section should be absent from HTML');
 });
 
 runTest('Footer: Mandatory eligibility statement, Chamber backing, and links', () => {
