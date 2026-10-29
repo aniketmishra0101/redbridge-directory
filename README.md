@@ -15,9 +15,9 @@ open index.html
 ### Option B: Local HTTP Preview Server
 Run the built-in, zero-dependency Node.js HTTP server:
 ```bash
-node server.js
-# Or via npm:
 npm start
+# Or directly:
+node scripts/preview-server.js
 ```
 Then visit [http://localhost:3000](http://localhost:3000) in your browser.
 
